@@ -10,7 +10,8 @@ function App() {
       title: 'Sony Playstation 5',
       amount: 950
     },
-    {id: 4, date: new Date(2023, 1, 13), title: 'Nintendo Switch', amount: 400}
+    {id: 4, date: new Date(2023, 1, 13), title: 'Nintendo Switch', amount: 400},
+    {id: 5, date: new Date(2023, 1, 13), title: 'SteamDeck', amount: 499.99}
   ]
 
   return (
