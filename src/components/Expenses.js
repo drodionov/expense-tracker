@@ -6,7 +6,7 @@ function Expenses(props) {
       (props) => <ExpenseItem className={'expense-item'} date={props.date} title={props.title}
                                   amount={props.amount}/>)
   return (
-      <div>
+      <div className={'expenses'}>
         {expenseItems}
       </div>
   )
