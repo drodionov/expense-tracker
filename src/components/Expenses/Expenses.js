@@ -4,9 +4,9 @@ import Card from "../Common/Card";
 
 const Expenses = (props) => {
   const expenseItems = props.items.map(
-      (props) => <ExpenseItem className={'expense-item'} date={props.date}
-                              title={props.title}
-                              amount={props.amount}/>)
+      (item) => <ExpenseItem className={'expense-item'} key={item.id}
+                             date={item.date} title={item.title}
+                             amount={item.amount}/>)
   return (
       <Card className={'expenses'}>
         {expenseItems}
