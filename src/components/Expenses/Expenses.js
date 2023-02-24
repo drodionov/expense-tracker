@@ -24,7 +24,7 @@ const Expenses = props => {
           <ExpensesFilter selectedYear={filterYear}
                           onChangeYear={onChangeYearHandler}/>
         </div>
-        {expenses}
+        {expenses.length === 0 ? 'No expenses found' : expenses}
       </Card>
   )
 }
