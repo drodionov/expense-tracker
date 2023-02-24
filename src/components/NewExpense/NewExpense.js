@@ -2,7 +2,7 @@ import './NewExpense.css'
 import ExpenseForm from "./ExpenseForm";
 import Card from "../Common/Card";
 
-const NewExpense = (props) => {
+const NewExpense = props => {
   const onSaveExpenseHandler = (enteredExpenseData) => {
     const newExpense = {
       ...enteredExpenseData,
@@ -12,8 +12,12 @@ const NewExpense = (props) => {
     props.onAddExpense(newExpense)
   }
 
+  const onCancelFormHandler = () => {
+    props.onHideForm()
+  }
+
   return (<Card className={'new-expense'}>
-    <ExpenseForm onSaveExpense={onSaveExpenseHandler}/>
+    <ExpenseForm onSaveExpense={onSaveExpenseHandler} onCancelForm={onCancelFormHandler}/>
   </Card>)
 }
 

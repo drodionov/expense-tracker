@@ -1,6 +1,6 @@
 import Expenses from "./components/Expenses/Expenses"
-import NewExpense from "./components/NewExpense/NewExpense";
 import {useState} from "react"
+import ExpenseControl from "./components/NewExpense/ExpenseControl";
 
 const DUMMY_EXPENSES = [
   {id: 1, date: new Date(2023, 1, 16), title: 'XBOX One S', amount: 600},
@@ -25,7 +25,7 @@ const App = () => {
 
   return (
       <div>
-        <NewExpense onAddExpense={addExpenseDataHandler}/>
+        <ExpenseControl onAddNewExpense={addExpenseDataHandler}/>
         <Expenses items={expenseData}/>
       </div>
   )
