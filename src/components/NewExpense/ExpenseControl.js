@@ -2,7 +2,7 @@ import Card from "../Common/Card";
 import {useState} from "react";
 import NewExpense from "./NewExpense";
 
-const ExpenseControl = props => {
+const ExpenseControl = ({onAddNewExpense}) => {
   const [showNewExpenseForm, setShowNewExpenseForm] = useState('false')
   const addNewExpenseHandler = () => {
     setShowNewExpenseForm('true')
@@ -14,11 +14,12 @@ const ExpenseControl = props => {
 
   const onAddExpenseHandler = newExpense => {
     setShowNewExpenseForm('false')
-    props.onAddNewExpense(newExpense)
+    onAddNewExpense(newExpense)
   }
 
   if (showNewExpenseForm === 'true') {
-    return <NewExpense onHideForm = {onHideFormHandler} onAddExpense = {onAddExpenseHandler}/>
+    return <NewExpense onHideForm={onHideFormHandler}
+                       onAddExpense={onAddExpenseHandler}/>
   }
 
   return (
